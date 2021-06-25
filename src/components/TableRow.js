@@ -6,10 +6,10 @@ const TableRow = ({currencyRow}) => {
         <tr>
             <td>{currencyRow.ccy}/{currencyRow.base_ccy}</td>
             <td>
-                <TableInput inputValue={currencyRow.buy}/>
+                <TableInput value={currencyRow.buy}/>
             </td>
             <td>
-                <TableInput inputValue={currencyRow.sale}/>
+                <TableInput value={currencyRow.sale}/>
             </td>
             {/* <img src={closeIcon} alt="" /> */}
         </tr>

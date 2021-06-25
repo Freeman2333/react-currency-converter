@@ -2,10 +2,16 @@ import React, {useState} from 'react'
 import closeIcon from '../assets/svg/window-close-regular.svg'
 import editIcon from '../assets/svg/edit-solid.svg'
 import checkIcon from '../assets/svg/check-solid.svg'
-const TableInput = ({inputValue}) => {
+const TableInput = ({value}) => {
+    const [inputValue, setInputValue] = useState(value)
+    const [isCorrectValue, setIsCorrectValue] = useState(true)
     const [edit, setEdit] = useState(false)
-    const handleInputChange = ()=>{
-        console.log('smth')
+    const handleInputChange = (e)=>{
+        const newValue = e.target.value
+        setInputValue(newValue)
+        const maxValue = 1.1 * value
+        const minValue = 0.9 * value
+        if(newValue<)
     }
     return (
         <>
