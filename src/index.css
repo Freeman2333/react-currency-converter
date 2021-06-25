@@ -13,6 +13,12 @@ code {
     monospace;
 }
 
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
 .App{
   display: flex;
   align-items: center;
@@ -50,11 +56,25 @@ img{
   z-index: 3;
 }
 
-.save-icon{
+.icon-set button{
+  border: none;
+  background: none;
+}
+
+
+.save-button{
   margin-right: 10px;
 }
 
+.save-button:disabled{
+  opacity: 0.3;
+}
+
 td:hover .icon-set{
+  display: block;
+}
+
+.edit.icon-set{
   display: block;
 }
 

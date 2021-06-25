@@ -11,16 +11,31 @@ const TableInput = ({value}) => {
         setInputValue(newValue)
         const maxValue = 1.1 * value
         const minValue = 0.9 * value
-        if(newValue<)
+        if(newValue<maxValue&&newValue>minValue){
+            setIsCorrectValue(true)
+        }else{
+            setIsCorrectValue(false)
+        }
+    }
+    const handleBlur = (e)=>{
+        setEdit(false);
+        if(!isCorrectValue){
+            setInputValue(value)
+            setIsCorrectValue(true)
+        }
     }
     return (
         <>
-            <input className="table-input" type="text" onFocus={()=>setEdit(true)} onBlur={()=>setEdit(false)} value={inputValue} onChange={handleInputChange} />  
-            <div className="icon-set">
+            <input className="table-input" type="number" onFocus={()=>setEdit(true)} onBlur={handleBlur} value={inputValue} onChange={handleInputChange} />  
+            <div className={`icon-set ${edit?'edit':''}`}>
                 {edit?(
                     <div className="group-save">
-                        <img className="save-icon" src={checkIcon} alt="save-icon" />    
-                        <img className="close-icon" src={closeIcon} alt="close-icon" />    
+                        <button disabled={!isCorrectValue} className="save-button">
+                            <img className="save-icon" src={checkIcon} alt="save-icon" /> 
+                        </button>
+                        <button onClick={handleBlur} className="close-button">
+                            <img className="close-icon" src={closeIcon} alt="close-icon" />  
+                        </button>
                     </div> 
                 ):(
                     <div className="group-edit">
