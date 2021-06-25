@@ -1,3 +1,4 @@
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -10,4 +11,49 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+.App{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+td,tr{
+  text-align: center;
+  position: relative;
+}
+
+img{
+  width: 20px;
+  height: 20px;
+}
+
+.table-input{
+  background: transparent;
+  border: none;
+  text-align: center;
+  width: 100%;
+  height: 100%;
+  padding: 5px 0; 
+  outline-color: rgb(0, 132, 255);
+}
+
+.icon-set{
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  display: none;
+}
+
+.icon-set img{
+  cursor: pointer;
+  z-index: 3;
+}
+
+.save-icon{
+  margin-right: 10px;
+}
+
+td:hover .icon-set{
+  display: block;
 }
