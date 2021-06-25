@@ -9,7 +9,7 @@ const TableInput = ({inputValue}) => {
     }
     return (
         <>
-            <input className="table-input" type="text" value={inputValue} onChange={handleInputChange} />  
+            <input className="table-input" type="text" onFocus={()=>setEdit(true)} onBlur={()=>setEdit(false)} value={inputValue} onChange={handleInputChange} />  
             <div className="icon-set">
                 {edit?(
                     <div className="group-save">

@@ -35,7 +35,7 @@ img{
   width: 100%;
   height: 100%;
   padding: 5px 0; 
-  outline-color: rgb(0, 132, 255);
+  outline: none
 }
 
 .icon-set{
@@ -57,3 +57,7 @@ img{
 td:hover .icon-set{
   display: block;
 }
+
+/* .table-input:focus + .icon-set{
+  display: block;
+} */
